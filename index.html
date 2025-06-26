@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform.</p>
+  </header>
+
+  <main>
+    <form method="POST" action="#" id="survey-form" novalidate aria-labelledby="title description">
+      <fieldset aria-labelledby="personal-info">
+        <legend id="personal-info">Personal Information</legend>
+
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name" aria-required="true" />
+
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" aria-required="true" />
+
+        <label id="number-label" for="number">Age:</label>
+        <input type="number" id="number" name="age" min="18" max="70" required placeholder="Age" aria-required="true" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Current Role</legend>
+        <label for="dropdown" class="visually-hidden">Select your role</label>
+        <select id="dropdown" name="current-role" required aria-required="true">
+          <option value="">-- Select an option --</option>
+          <option value="student">Student</option>
+          <option value="full-time-job">Full Time Job</option>
+          <option value="part-time-job">Part Time Job</option>
+          <option value="not-disclosed">Prefer not to say</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferred Position</legend>
+        <label><input type="radio" name="job-position" value="hybrid" required aria-required="true" /> Hybrid</label>
+        <label><input type="radio" name="job-position" value="on-site" required aria-required="true" /> On-Site</label>
+        <label><input type="radio" name="job-position" value="remote" required aria-required="true" /> Remote</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>How did you hear about us?</legend>
+        <label><input type="checkbox" name="source" value="linkedin" required aria-required="true" /> Linkedin</label>
+        <label><input type="checkbox" name="source" value="web" required aria-required="true" /> Web</label>
+        <label><input type="checkbox" name="source" value="instagram" required aria-required="true" /> Instagram</label>
+      </fieldset>
+
+      <label for="comments">Any Comments?</label>
+      <textarea id="comments" name="comments" rows="6" placeholder="Share your thoughts..."></textarea>
+
+      <button id="submit-btn" type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Company</p>
+  </footer>
+</body>
+</html>
